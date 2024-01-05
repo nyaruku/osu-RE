@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         osu! RE
-// @version      1.0
+// @version      1.0.1
 // @description  osu! Page Design Alter
 // @author       _Railgun_
 // @match        https://osu.ppy.sh/*
@@ -367,6 +367,34 @@ btn-circle {
 .line-chart--profile-page .line-chart__hover-circle {
     background-color: transparent;
     border-color: #0095ff;
+}
+.chat-input {
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+}
+.btn-osu-big--chat-send {
+    border-radius: 0px;
+}
+.chat-input__box {
+
+    border-radius: 0px;
+    margin: 0 0 0 0;
+ }
+ .avatar--full-circle {
+    border-radius: 0px;
+}
+.chat-message-group__bubble {
+    background: black;
+    border-radius: 0px;
+    max-width: 100%;
+}
+.line-chart--profile-page .line-chart__hover-circle {
+    border-radius: 100%;
+    border-width: 0px;
+    height: 0;
+    left: 0;
+    top: 0;
+    width: 0;
 }
 ` );
 (function() {
