@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         osu! RE
-// @version      1.0.1
+// @version      1.1
 // @description  osu! Page Design Alter
 // @author       _Railgun_
 // @match        https://osu.ppy.sh/*
@@ -384,7 +384,7 @@ btn-circle {
     border-radius: 0px;
 }
 .chat-message-group__bubble {
-    background: black;
+    background: transparent;
     border-radius: 0px;
     max-width: 100%;
 }
@@ -395,6 +395,28 @@ btn-circle {
     left: 0;
     top: 0;
     width: 0;
+}
+.chat-message-group--own {
+    flex-direction: row;
+    margin-left: 0%;
+    margin-right: 0;
+    background-color: transparent;
+}
+.chat-message-group {
+    color: #fff;
+    display: flex;
+    background-color: rgb(20 25 30);
+    margin: 5px 0px 0px 0;
+}
+.chat-conversation {
+    background-color: black;
+}
+.chat-message-group__sender {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.chat-conversation-list {
+    background-color: rgb(25 20 20);
 }
 ` );
 (function() {
@@ -410,6 +432,10 @@ btn-circle {
                 var element = document.querySelector(selector);
                 if (element) {
                     element.parentNode.removeChild(element);
+                }
+                var element2 = document.querySelector(".simple-menu__extra");
+                if (element2) {
+                    element2.parentNode.removeChild(element2);
                 }
             }
         });
